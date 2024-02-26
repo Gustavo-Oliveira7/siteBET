@@ -101,7 +101,7 @@ nav{
     color: var(--white);
   }
   
-  .link a::after {
+.link a::after {
     content: "";
     position: absolute;
     height: 2px;
@@ -110,8 +110,319 @@ nav{
     bottom: 0;
     background-color: var(--secondary-color);
     transition: 0.3s;
+}
+
+.link a:hover::after {
+    width: 50%;
+}
+
+.header_container {
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.header_container::before {
+    content: "GHO INVEST";
+    position: absolute;
+    bottom: 5rem;
+    right: 20rem;
+    font-size: 10rem;
+    font-weight: 700;
+    line-height: 7rem;
+    color: var(--white);
+    opacity: 0.05;
+    z-index: -1;
+  }
+
+.header_blur {
+    bottom: 5rem;
+    right: 0;
+}
+
+.header_content h4 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.header_content h1 {
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 6rem;
+    color: var(--white);
+    }
+
+.header_content h1 span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--white);
+}
+
+.header_content p {
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+.header_image {
+    position: relative;
+}
+
+.header_image::before {
+    content: "o";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: var(--secondary-color);
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.header_image img {
+    max-width: 500px;
+    margin: auto;
+}
+
+.join_image {
+    margin-top: 4rem;
+    position: relative;
+}
+  
+.join_image img {
+    border-radius: 10px;
+}
+  
+.join_grid {
+    position: absolute;
+    bottom: -5rem;
+    width: calc(100% - 4rem);
+    padding: 2rem;
+    margin: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: var(--primary-color-light);
+    border-radius: 10px;
+}
+  
+.join_card {
+    flex: 1 1 250px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+  
+.join_card span {
+    padding: 5px 12px;
+    font-size: 1.75rem;
+    color: var(--white);
+    background-color: var(--secondary-color-dark);
+    border-radius: 5px;
+}
+  
+.join_card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
+}
+  
+.join_card p {
+    color: var(--text-light);
+}
+
+.class_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+  
+.class_image {
+    position: relative;
+}
+  
+.class_image .class_img-1 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 300px;
+    border-radius: 10px;
+}
+  
+.class_image .class_img-2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.class_content {
+    padding: 2rem 0;
+}
+  
+.class_content .section_header {
+    text-align: left;
+    max-width: 400px;
+}
+  
+.class_content p {
+    margin-bottom: 4rem;
+    color: var(--text-light);
+}
+
+.price_grid {
+    margin-top: 4rem;
+    display: block;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
   
-  .link a:hover::after {
-    width: 50%;
+  .price_card {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color-light);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s;
   }
+  
+  .price_card:hover {
+    background-color: var(--primary-color-extra-light);
+    border-color: var(--secondary-color);
+  }
+  
+  .price_card_content {
+    flex: 1;
+    margin-bottom: 2rem;
+  }
+  
+  .price_card h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
+  }
+  
+  .price_card h3 {
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white);
+    border-bottom: 2px solid var(--white);
+  }
+  
+  .price_card p {
+    margin-bottom: 0.75rem;
+    color: var(--white);
+  }
+  
+  .price_card p i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+  }
+  
+  .price_btn {
+    color: var(--secondary-color);
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+  }
+  
+  .price_btn:hover {
+    color: var(--white);
+    background-color: var(--secondary-color);
+  }
+  
+
+
+
+@media (width < 900px) {
+    .nav_links {
+        display: none;
+    }
+
+    .header_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .header_image {
+        grid-area: 1/1/2/2;
+    }
+
+    .explore_grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .class_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .class_image {
+        min-height: 500px;
+    }
+
+    .price_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .review_container {
+        gap: 2rem;
+    }
+
+    .footer_container {
+        grid-template-columns: 1fr 200px;
+    }
+}
+  
+@media (width < 600px) {
+    .explore_header {
+        flex-direction: column;
+    }
+
+    .explore_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .join_container {
+        margin-bottom: 15rem;
+    }
+
+    .join_grid {
+        width: 100%;
+        margin: 0;
+        bottom: -20rem;
+    }
+
+    .price_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .review_container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .review_footer {
+        flex-direction: column;
+    }
+
+    .footer_container {
+        grid-template-columns: 1fr 150px;
+    }
+
+    .footer_bar {
+        text-align: center;
+    }
+}
